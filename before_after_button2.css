@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border-radius: 32px;
+    width: 400px;
+    height: 100px;
+    background-color: rgb(25, 24, 24);
+    position: relative;
+    color:white;
+    font-size: 20px;
+}
+button::before{ 
+    content:"";
+    width:103%;
+    height: 111%;
+    background-color: black;
+    position:absolute;
+    border-radius: 32px;
+    top:-5px;
+    left:-6px;
+    z-index:-1;
+    
+}
+button:hover::before{
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    filter: blur(5px);
+    animation-name: ani_1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+/* @keyframes ani {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+    
+} */
+@keyframes ani_1 {
+    0%{
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    }
+    50%{
+        background: linear-gradient(45deg,  #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000,#ff0000, #ff7300, #fffb00);
+
+    }
+    100%{
+        background: linear-gradient(45deg,  #48ff00,  #ff0000,#ff0000, #ff7300, #fffb00,#00ffd5, #002bff, #7a00ff, #ff00c8);
+
+    }
+    
+}
+/* .button:active::after{
+    background: transparent;
+} */
